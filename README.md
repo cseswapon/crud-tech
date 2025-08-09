@@ -61,5 +61,3 @@ yarn dev
 
 The app will be running at `http://localhost:5173` (or your Vite dev port).
 
-
-```
