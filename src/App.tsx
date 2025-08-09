@@ -1,37 +1,29 @@
-import { Button, Modal } from "antd";
-import { useState } from "react";
+import type { JSX } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Dashboard from "./page/Dashboard";
+import Login from "./page/Login";
+
+const PrivateRoute = ({ children }: { children: JSX.Element }) => {
+  const token = localStorage.getItem("token");
+  return token ? children : <Navigate to="/login" replace />;
+};
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
   return (
-    <>
-      <Button type="primary" onClick={showModal}>
-        Open Modal
-      </Button>
-      <Modal
-        title="Basic Modal"
-        closable={{ "aria-label": "Custom Close Button" }}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login/>} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
