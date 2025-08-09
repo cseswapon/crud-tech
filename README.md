@@ -28,7 +28,7 @@ A responsive admin dashboard to manage and analyze content (e.g., blog posts), b
 
 ## 🖥️ Demo
 
-🔗 **Live URL**: []()
+🔗 **Live URL**: [https://cubix-tech.vercel.app/](https://cubix-tech.vercel.app/)
 
 📁 **GitHub Repo**: [https://github.com/cseswapon/crud-tech.git](https://github.com/cseswapon/crud-tech.git)
 
