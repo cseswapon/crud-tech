@@ -30,7 +30,7 @@ A responsive admin dashboard to manage and analyze content (e.g., blog posts), b
 
 🔗 **Live URL**: []()
 
-📁 **GitHub Repo**: []()
+📁 **GitHub Repo**: [https://github.com/cseswapon/crud-tech.git](https://github.com/cseswapon/crud-tech.git)
 
 ---
 
@@ -39,8 +39,8 @@ A responsive admin dashboard to manage and analyze content (e.g., blog posts), b
 ### 1. Clone the repository
 
 ```bash
-git clone 
-cd admin-dashboard
+git clone https://github.com/cseswapon/crud-tech.git
+cd crud-tech
 ````
 
 ### 2. Install dependencies

@@ -28,7 +28,7 @@ const Filters: React.FC = () => {
   const clearFilters = () => {
     setSearch("");
     setAuthor("");
-    setDateRange(null);
+    setDateRange(["", ""]);
   };
 
   return (
@@ -54,7 +54,7 @@ const Filters: React.FC = () => {
           if (dateStrings[0] && dateStrings[1]) {
             setDateRange([dateStrings[0], dateStrings[1]]);
           } else {
-            setDateRange(null);
+            setDateRange(["", ""]);
           }
         }}
         allowClear
