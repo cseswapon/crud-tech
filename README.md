@@ -1,3 +1,4 @@
+
 ````md
 ## Admin Dashboard
 
@@ -34,6 +35,20 @@ A responsive admin dashboard to manage and analyze content (e.g., blog posts), b
 
 ---
 
+## 🧑‍💻 User Credentials
+
+The app uses a **fake login system** with two predefined users for testing role-based features:
+
+| Role   | Email              | Password |
+|--------|--------------------|----------|
+| Admin  | admin@admin.com    | 123456   |
+| Editor | editor@gmail.com   | 123456   |
+
+- **Admins** can view and edit articles.
+- **Editors** can only view content (no editing privileges).
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
@@ -41,7 +56,7 @@ A responsive admin dashboard to manage and analyze content (e.g., blog posts), b
 ```bash
 git clone https://github.com/cseswapon/crud-tech.git
 cd crud-tech
-````
+```
 
 ### 2. Install dependencies
 
@@ -60,4 +75,4 @@ yarn dev
 ```
 
 The app will be running at `http://localhost:5173` (or your Vite dev port).
-
+````

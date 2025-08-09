@@ -52,9 +52,17 @@ const Login: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="backdrop-blur-sm bg-white/60 p-8 rounded shadow-md w-80">
+      <div className="backdrop-blur-sm bg-white/60 p-8 rounded shadow-md w-xl">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        <Form layout="vertical" onFinish={onFinish}>
+        <Form
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{
+            username: "editor@gmail.com",
+            password: "123456",
+            role: "editor",
+          }}
+        >
           <Form.Item
             label="Email"
             name="username"
@@ -91,6 +99,24 @@ const Login: React.FC = () => {
             </Button>
           </Form.Item>
         </Form>
+
+        <div className="text-center text-sm border p-3 rounded-sm text-gray-600 mt-4">
+          <p className="font-semibold">Admin Login:</p>
+          <p>
+            Email: <code>admin@admin.com</code>
+          </p>
+          <p>
+            Password: <code>123456</code>
+          </p>
+
+          <p className="mt-2 font-semibold">Editor Login (default):</p>
+          <p>
+            Email: <code>editor@gmail.com</code>
+          </p>
+          <p>
+            Password: <code>123456</code>
+          </p>
+        </div>
       </div>
     </div>
   );
